@@ -57,6 +57,4 @@ fun GreetingPreview() {
 fun ShowPreview() {
     ModifierExample()
     GreetingPreview()
-
-
 }
