@@ -27,8 +27,6 @@ fun TextExample() {
         modifier = Modifier
             .fillMaxSize(),
         contentAlignment = Alignment.Center
-
-
     ){
         Text(
             text = stringResource(id = R.string.name), //Texto que se mostrara
@@ -49,12 +47,6 @@ fun TextExample() {
 
                 )
             )
-
-
-
-
-
         )
     }
-
 }
