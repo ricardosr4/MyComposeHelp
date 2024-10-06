@@ -11,23 +11,27 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.mycompose.ui.component.button.CustomButton
 import com.example.mycompose.ui.component.componentscontrol.MySwitch
 import com.example.mycompose.ui.component.modifier.ModifierExample
+import com.example.mycompose.ui.component.row.SuperHeroView
+import com.example.mycompose.ui.component.row.SuperHeroView2
 import com.example.mycompose.ui.theme.MyComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
         setContent {
             MyComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
-                        name = "Richard",
+                        name = "",
                         modifier = Modifier
                             .padding(innerPadding)
                     )
-                    MySwitch()
+                    SuperHeroView()
+                    SuperHeroView2()
 
                 }
             }
@@ -38,7 +42,7 @@ class MainActivity : ComponentActivity() {
 @Composable  //todas las funciones deven ir con el @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = " $name",
         modifier = modifier
     )
 }
